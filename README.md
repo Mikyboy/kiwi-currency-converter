@@ -1,5 +1,5 @@
 # Kiwi Currency Converter
-Currency converter for a kiwi job application as per the [specification](https://gist.github.com/MichalCab/c1dce3149d5131d89c5bbddbc602777c)
+Currency converter for a kiwi job application as per the [specification](https://gist.github.com/MichalCab/c1dce3149d5131d89c5bbddbc602777c).
 
 ## Installation
 
@@ -53,5 +53,8 @@ GET /currency-converter?amount=1&input_currency=US$&output_currency=GBP HTTP/1.1
 
 
 ## Implementation details
-- Since there is many currencies with for example symbol £ (Pound sterling, Egyptian pound, Syrian pound,...) I have decided to let the program simply choose the first currency it finds in the currency dictionary (I could imagine a solution for example where certain currencies have bigger priority but as it was not specified I have chosen this solution)
-- As per the web API output I have chosen to simply write out JSON as a text and not to parse it into HTML simply because of the JSON viewers every browser offers
+- Since there is many currencies represented by, for example, symbol £ (Pound sterling, Egyptian pound, Syrian pound,...) I have decided to let the program simply choose the first currency it finds in the currencies dictionary (I could imagine a solution for example where certain currencies have bigger priority but as it was not specified I have chosen this solution)
+
+
+## Docker
+The reason I haven't put this application into docker container is that I was developing it on a Windows 10 home (Linux Bash Shell), which I found out (I have always used linux before which I currently don't have installed) does't support docker desktop and is not a very good friend with using docker in the windows provided Linux Bash Shell. I hope this fact won't result in a negative review of this project.

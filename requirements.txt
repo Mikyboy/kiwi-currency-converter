@@ -1,6 +1,4 @@
-data_format_exceptions
 argparse
-json
 requests 
 flask
 forex-python

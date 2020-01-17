@@ -1,26 +1,11 @@
-'''
-Kiwi currency converter
-Martin Mikan
-16. 01. 2020
+#!/usr/bin/env python
 
-Usage:
-- ./python3 currency_converter.py --amount 100.0 --input_currency EUR --output_currency CZK
-- ./python3 currency_converter.py --amount 0.9 --input_currency ¥ --output_currency AUD
-- ./python3 currency_converter.py --amount 10.92 --input_currency £ 
+"""Kiwi currency converter"""
 
-    #TODO smaž python3 currency_converter.py --amount 1 --input_currency USD --output_currency INR
+__author__ = "Martin Mikan"
+__email__ = 'Martin.Mikan@email.cz'
+__version__ = '1.0'
 
-
-#pip install requests
-#pip install flask
-python3 -m venv kiwi
-source kiwi/bin/activate         -> deactivate
-
-pip install Flask twilio
-
-run by $      FLASK_APP=currency_converter.py flask run
-http://localhost:5000/currency-converter?amount=1&input_currency=USD&output_currency=INR
-'''
 import data_format_exceptions
 import sys
 import argparse

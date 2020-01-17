@@ -74,7 +74,7 @@ class CurrencyConverter:
                 "amount": self.amount,
                 "currency": self.inputCurrency
             },
-            "output": convertedDict # TODO ta čárka!
+            "output": convertedDict
         }
 
         return json.dumps(result, indent=4, sort_keys=True)
@@ -89,7 +89,6 @@ class CurrencyConverter:
         self.inputCurrency = self.check_currency_code_and_transform_symbol(self.inputCurrency)
         self.outputCurrency = self.check_currency_code_and_transform_symbol(self.outputCurrency)
 
-    # TODO nedává konzistentní hodnoty - je to v pořádku - zdokumentuj v README + taky jsou tam i své hodnoty (CZK -> CZK)
     def check_currency_code_and_transform_symbol(self, currency):
         '''Checks if the currency code is known and transforms symbol into currency code'''
         if not currency:

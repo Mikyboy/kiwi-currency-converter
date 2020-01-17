@@ -84,7 +84,7 @@ class CurrencyConverter:
         try:
             self.amount = float(self.amount)
         except ValueError:
-            raise data_format_exceptions.AmountValueNotFloat('The --amount input parameter "' + self.amount + '" is not float, run with parameter --h for help')
+            raise data_format_exceptions.AmountValueNotFloat('The --amount input parameter "' + self.amount + '" is not float')
         
         self.inputCurrency = self.check_currency_code_and_transform_symbol(self.inputCurrency)
         self.outputCurrency = self.check_currency_code_and_transform_symbol(self.outputCurrency)
@@ -104,7 +104,7 @@ class CurrencyConverter:
                 if symbol == currency:
                     return code
                 
-        raise data_format_exceptions.CurrencyNotRecognized('Didn\'t recognize "' + currency + '" currency, run with parameter --h for help')
+        raise data_format_exceptions.CurrencyNotRecognized('Didn\'t recognize "' + currency + '" currency')
 
 
 # API

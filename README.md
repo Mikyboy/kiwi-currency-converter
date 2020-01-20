@@ -6,6 +6,8 @@ Currency converter for a kiwi job application as per the [specification](https:/
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the requirements.
 
 ```bash
+python3 -m venv kiwi
+source kiwi/bin/activate
 pip3 install -r requirements.txt
 ```
 
@@ -13,9 +15,10 @@ pip3 install -r requirements.txt
 
 This application is both a CLI and a web API application.
 
+To run this application from the CLI see Examples
+
 To run this application as a web API application run
 ```bash
-source kiwi/bin/activate
 FLASK_APP=currency_converter.py flask run
 ```
 
